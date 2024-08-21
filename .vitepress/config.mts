@@ -3,7 +3,7 @@ import { set_sidebar } from './utils/index';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	base:'/my-website/',
+	base:'/vitepress-demo/',
 	head: [['link', { rel: 'icon', href: '/3.jpg' }]],
 	title: "peng's docs",
 	description: 'A VitePress Site',
@@ -70,4 +70,21 @@ export default defineConfig({
       copyright: "Copyright@ 2024 PENG"
     }
 	},
+	 // 配置markdown扩展
+	 markdown: {
+    lineNumbers: true, // 开启代码块行号
+    // options for markdown-it-anchor
+    // https://github.com/valeriangalliat/markdown-it-anchor#usage
+    // anchor: {
+    //   permalink: markdownItAnchor.permalink.headerLink(),
+    // },
+
+    // // options for @mdit-vue/plugin-toc
+    // // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
+    // toc: { level: [2, 3] },
+    // config: (md) => {
+    //   // use more markdown-it plugins!
+    //   md.use(tocPlugin);
+    // },
+  },
 });
