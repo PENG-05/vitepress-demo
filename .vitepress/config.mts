@@ -3,6 +3,7 @@ import { set_sidebar } from './utils/index';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+	base:'/my-website/',
 	head: [['link', { rel: 'icon', href: '/3.jpg' }]],
 	title: "peng's docs",
 	description: 'A VitePress Site',
