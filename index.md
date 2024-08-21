@@ -14,8 +14,8 @@ hero:
           text: Markdown 实例
           link: /markdown-examples
         - theme: alt
-          text: API 实例
-          link: https://www.baidu.com
+          text: CI/CD
+          link: https://vitepress.dev/guide/deploy#github-pages
 
 features:
     - title: 💡 Feature A
