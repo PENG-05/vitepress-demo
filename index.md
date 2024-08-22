@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-    name: '我的项目'
-    text: '一个文档站点'
-    tagline: 好好学习，天天向上
+    name: '一个文档站点'
+    # text: '好好学习，天天向上'
+    tagline: Keep Reading, Keep Writing, Keep Coding
     image:
         src: /2.jpg
         alt: VitePress

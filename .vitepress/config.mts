@@ -17,30 +17,40 @@ export default defineConfig({
 				text: 'home',
 				items: [
 					{ text: '首页', link: '/' },
-					{ text: 'markdown实例', link: '/introduce/page_one' },
+					{ text: '介绍', link: '/introduce/page_one' },
 				],
 			},
 			{ text: 'examples', link: '/markdown-examples' }, // link 绝对路径
 		],
 		// 文章页，默认三边栏，右边根据标题生成的，左边是sidebar---vitepress官网
 		// 一个一个手写items比较麻烦，可以用脚本自动生成侧边栏
-		// sidebar: [
-		// 	{
-		// 		text: 'Examples',
-		// 		items: [
-		// 			{ text: 'Markdown 演示', link: '/markdown-examples' },
-		// 			{ text: 'Runtime API 演示', link: '/api-examples' },
-		// 		],
-		// 	},
-		// 	{
-		// 		text: 'Examples',
-		// 		items: [
-		// 			{ text: 'Markdown 演示', link: '/markdown-examples' },
-		// 			{ text: 'Runtime API 演示', link: '/api-examples' },
-		// 		],
-		// 	},
-		// ],
-		sidebar: { '/page_one/vue': set_sidebar('/page_one/vue'), '/introduce/page_one': set_sidebar('/introduce/page_one') },
+		sidebar: [
+			{
+				text: 'page_one',
+				items: [{ text: 'Markdown 演示', link: '/page_one/vue' }],
+			},
+			{
+				text: 'introduce',
+				items: [
+					{
+						text: 'Markdown 演示',
+						link: '/introduce/page_one',
+						items: [
+							{ text: '安装配置', link: '/introduce/page_one/安装配置' },
+							{
+								text: '主要功能',
+								link: '/introduce/page_one/主要功能',
+							},
+							{
+								text: '主要用途',
+								link: '/introduce/page_one/主要用途',
+							},
+						],
+					},
+				],
+			},
+		],
+		// sidebar: { '/page_one/vue': set_sidebar('/page_one/vue'), '/introduce/page_one': set_sidebar('/introduce/page_one') },
 		// sidebar: false,
 		// aside:"left", //设置右侧侧边栏在左侧使用
 		// 社交链接，内置的都是国外的，国内只能通过svg设置
@@ -75,7 +85,8 @@ export default defineConfig({
 		},
 		// 底部设置
 		footer: {
-			copyright: 'Copyright@ 2024 PENG',
+			message: '仅演示使用',
+			copyright: 'Copyright@ 2024.08.21 PENG',
 		},
 	},
 	// 配置markdown扩展
